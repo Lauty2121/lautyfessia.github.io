@@ -3,12 +3,14 @@ const menuBtn = document.getElementById('menu-btn');
 const sidebar = document.getElementById('sidebar');
 
 menuBtn.addEventListener('click', () => {
-  if (sidebar.classList.contains('hidden')) {
-    sidebar.classList.remove('hidden');
-    sidebar.classList.add('visible');
-  } else {
+  if (sidebar.classList.contains('visible')) {
+    // Si ya está visible, lo ocultamos
     sidebar.classList.remove('visible');
     sidebar.classList.add('hidden');
+  } else {
+    // Si está oculto, lo mostramos
+    sidebar.classList.remove('hidden');
+    sidebar.classList.add('visible');
   }
 });
 
